@@ -1,3 +1,13 @@
+# React Country Info Display APP
+This app fetches info from rest api. google maps, and weather Api
+rest Api => Complete country Info (land area, population, latitude, longitude, Currency, Language)
+OpenWeatherApi => Gives out Weather at particular latitude and longitude
+Google Map => Highligts a Particular Country
+
+Made use of React-Router to navigate, React-Slick, React-Charts, React-googleMaps, Styled Components, React Hooks, Bootstrap
+
+More possible features will be added soon
+
 # Frontend Mentor - REST Countries API with color theme switcher
 
 ![Design preview for the REST Countries API with color theme switcher coding challenge](./design/desktop-preview.jpg)
