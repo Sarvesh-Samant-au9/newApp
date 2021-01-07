@@ -1,0 +1,13 @@
+.countryName {
+  text-align: center;
+  display: inline-block;
+  /* line-height: 1; */
+  transition: all 0.3s ease-in-out;
+}
+.countryName:hover {
+  transform: skewY(3deg);
+  font-family: cursive;
+  text-decoration: underline;
+  color: white;
+  background-color: red;
+}

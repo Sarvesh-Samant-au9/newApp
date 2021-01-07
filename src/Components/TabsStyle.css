@@ -1,0 +1,17 @@
+.tabsHeading {
+  cursor: pointer;
+}
+.tabsHeading:hover {
+  color: red;
+  font-family: cursive;
+  text-decoration: underline;
+}
+.information {
+  display: inline-block;
+  color: red;
+}
+.information:hover {
+  font-family: cursive;
+  color: white;
+  background-color: red;
+}
