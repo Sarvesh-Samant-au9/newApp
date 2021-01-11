@@ -171,52 +171,55 @@ export class App extends Component {
   }
 
   render() {
-    // console.log(this.state);
     return (
-      <div>
-        <Navbar
-          allCountryArray={this.state.allContry}
-          landInfo={{
-            WorldLand: this.state.WorldLand,
-            AsiaLand: this.state.AsiaLand,
-            AmericaLand: this.state.AmericaLand,
-            AfricaLand: this.state.AfricaLand,
-            EuropeLand: this.state.EuropeLand,
-            OceaniaLand: this.state.OceaniaAusLand,
-            PolarLand: this.state.PolarLand,
-          }}
-          populationInfo={{
-            WorldPopulation: this.state.worldPop,
-            AsiaPopulation: this.state.AsiaPop,
-            AmericasPopulation: this.state.AmericasPop,
-            AfricaPopulation: this.state.AfricasPop,
-            OceaniaPopulation: this.state.AustraliasPop,
-            EuropePopulation: this.state.EuropesPop,
-            PolarPopulation: this.state.PolarPopulation,
-          }}
-        />
-        <AllCountry
-          allCountryArray={this.state.allContry}
-          landInfo={{
-            WorldLand: this.state.WorldLand,
-            AsiaLand: this.state.AsiaLand,
-            AmericaLand: this.state.AmericaLand,
-            AfricaLand: this.state.AfricaLand,
-            EuropeLand: this.state.EuropeLand,
-            OceaniaLand: this.state.OceaniaAusLand,
-            PolarLand: this.state.PolarLand,
-          }}
-          populationInfo={{
-            WorldPopulation: this.state.worldPop,
-            AsiaPopulation: this.state.AsiaPop,
-            AmericasPopulation: this.state.AmericasPop,
-            AfricaPopulation: this.state.AfricasPop,
-            OceaniaPopulation: this.state.AustraliasPop,
-            EuropePopulation: this.state.EuropesPop,
-            PolarPopulation: this.state.PolarPopulation,
-          }}
-        />
-      </div>
+      <>
+        {this.state.allContry && (
+          <>
+            <Navbar
+              allCountryArray={this.state.allContry}
+              landInfo={{
+                WorldLand: this.state.WorldLand,
+                AsiaLand: this.state.AsiaLand,
+                AmericaLand: this.state.AmericaLand,
+                AfricaLand: this.state.AfricaLand,
+                EuropeLand: this.state.EuropeLand,
+                OceaniaLand: this.state.OceaniaAusLand,
+                PolarLand: this.state.PolarLand,
+              }}
+              populationInfo={{
+                WorldPopulation: this.state.worldPop,
+                AsiaPopulation: this.state.AsiaPop,
+                AmericasPopulation: this.state.AmericasPop,
+                AfricaPopulation: this.state.AfricasPop,
+                OceaniaPopulation: this.state.AustraliasPop,
+                EuropePopulation: this.state.EuropesPop,
+                PolarPopulation: this.state.PolarPopulation,
+              }}
+            />
+            <AllCountry
+              allCountryArray={this.state.allContry}
+              landInfo={{
+                WorldLand: this.state.WorldLand,
+                AsiaLand: this.state.AsiaLand,
+                AmericaLand: this.state.AmericaLand,
+                AfricaLand: this.state.AfricaLand,
+                EuropeLand: this.state.EuropeLand,
+                OceaniaLand: this.state.OceaniaAusLand,
+                PolarLand: this.state.PolarLand,
+              }}
+              populationInfo={{
+                WorldPopulation: this.state.worldPop,
+                AsiaPopulation: this.state.AsiaPop,
+                AmericasPopulation: this.state.AmericasPop,
+                AfricaPopulation: this.state.AfricasPop,
+                OceaniaPopulation: this.state.AustraliasPop,
+                EuropePopulation: this.state.EuropesPop,
+                PolarPopulation: this.state.PolarPopulation,
+              }}
+            />
+          </>
+        )}
+      </>
     );
   }
 }

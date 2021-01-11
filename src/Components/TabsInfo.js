@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Tab, TabList, Tabs, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import "./TabsStyle.css";
-import { Pie, Line, Bar, Doughnut, Bubble } from "react-chartjs-2";
+import { Pie, Line, Doughnut } from "react-chartjs-2";
 import Weather from "./Weather";
 
 const TabsInfo = (props) => {
@@ -41,6 +41,10 @@ const TabsInfo = (props) => {
   }, []);
   // console.log(pop);
   const numberWithCommas = (n) => {
+    console.log(n)
+    if (n === null) {
+      return n = 0
+    }
     n = n.toString();
     var pattern = /(-?\d+)(\d{3})/;
     while (pattern.test(n)) n = n.replace(pattern, "$1,$2");

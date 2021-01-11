@@ -2,14 +2,14 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = ({ landInfo, populationInfo }) => {
-  console.log(landInfo, populationInfo);
+  // console.log(landInfo, populationInfo);
   return (
     <div>
       <nav
         className="navbar navbar-expand-lg navbar navbar-light my-3"
         style={{ backgroundColor: " #e3f2fd" }}
       >
-        <h2 className="navbar-brand">Navbar</h2>
+        <h2 className="navbar-brand">World Atlas</h2>
         <button
           className="navbar-toggler"
           type="button"

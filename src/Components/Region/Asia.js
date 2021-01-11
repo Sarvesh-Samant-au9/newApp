@@ -108,7 +108,15 @@ function Asia(props) {
             Go Back
           </Link>
         </>
-      ) : null}
+      ) : (
+        <h1>
+          There is no such Country in {props.match.params.regional} continent
+          <br />
+          <Link to="/" className="btn btn-outline-danger btn-lg">
+            Go Back
+          </Link>
+        </h1>
+      )}
     </div>
   );
 }

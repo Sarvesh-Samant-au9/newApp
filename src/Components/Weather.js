@@ -1,20 +1,3 @@
-// import React, { Component } from "react";
-
-// export default class Weather extends Component {
-//   constructor(props) {
-//     super(props);
-//   }
-//   componentDidMount = async () => {
-//     const fecthData = await fetch(
-//       `api.openweathermap.org/data/2.5/weather?lat=${this.props.latitude}&lon=${this.props.longitude}&appid=${APIKEY}`
-//     );
-//     const response = await fecthData.json();
-//     console.log(response);
-//   };
-//   render() {
-//     return <div>{}</div>;
-//   }
-// }
 import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import "./Weather.css";

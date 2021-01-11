@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import TabsInfo from "../Components/TabsInfo";
-import TabsInfoByCode from "./TabsInfoByCode";
+
 export class CountryByCode extends Component {
   constructor(props) {
     super(props);

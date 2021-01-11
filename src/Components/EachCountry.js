@@ -61,7 +61,7 @@ export class EachCountry extends Component {
                         },
                       }}
                       key={indexKey}
-                      className="btn btn-outline-success mr-3"
+                      className="btn btn-outline-success mr-3  mb-2"
                     >
                       {border}
                     </Link>
