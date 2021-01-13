@@ -5,9 +5,15 @@ function AllCountry({ allCountryArray, landInfo, populationInfo }) {
   // console.log(allCountryArray);
   const [search, setSearch] = useState("");
   const [data, setData] = useState(allCountryArray);
+  const [sortOrder, setSortOrder] = useState("");
+
   useEffect(() => {
     setData(allCountryArray);
   }, [allCountryArray]);
+
+  const changeOrder = (orderType) => {
+    setSortOrder(orderType);
+  };
 
   const sortArray = (type) => {
     const types = {
@@ -15,16 +21,25 @@ function AllCountry({ allCountryArray, landInfo, populationInfo }) {
       population: "population",
       area: "area",
     };
-
     const sortProperty = types[type];
+    console.log(sortProperty);
     const sorted = [...allCountryArray].sort(
       (a, b) => b[sortProperty] - a[sortProperty]
     );
     setData(sorted);
     // console.log(sorted);
+    if (sortOrder === "higher") {
+      if (sortProperty === "name") {
+        setData(sorted.reverse());
+      }
+      setData(sorted);
+    } else if (sortOrder === "lower") {
+      if (sortProperty === "name") {
+        setData(sorted);
+      }
+      setData(sorted.reverse());
+    }
   };
-
-  
 
   const getChanged = (e) => {
     setSearch(e.target.value);
@@ -53,11 +68,14 @@ function AllCountry({ allCountryArray, landInfo, populationInfo }) {
               onChange={getChanged}
             />
             <select onChange={(e) => sortArray(e.target.value)}>
-              <option value="name">
-                Name (default)
-              </option>
+              <option value="name">Name (default)</option>
               <option value="population">Population</option>
               <option value="area">Land Area</option>
+            </select>
+
+            <select onChange={(e) => changeOrder(e.target.value)}>
+              <option value="high">Higher (default)</option>
+              <option value="lower">Lower</option>
             </select>
           </div>
 
@@ -124,21 +142,3 @@ function AllCountry({ allCountryArray, landInfo, populationInfo }) {
 }
 
 export default AllCountry;
-
-//   // const sortArray = (type) => {
-//   //   const types = {
-//   //     name: "name",
-//   //     area: "area",
-//   //     population: "population",
-//   //   };
-//   //   const sortProperty = types[type];
-//   //   // console.log(sortProperty)
-//   //   if (sortProperty === "name") {
-//   //     return setData(allCountryArray);
-//   //   } else {
-//   //     const sorted = [...allCountryArray].sort(
-//   //       (a, b) => a[sortProperty] - b[sortProperty]
-//   //     );
-//   //     setData(sorted);
-//   //     console.log(sorted);
-//   //   }
